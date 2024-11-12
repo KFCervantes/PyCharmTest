@@ -8,6 +8,12 @@ import cmath
 def myPow(x, y):
     return cmath.exp(y * cmath.log(x))
 
+
+def allRoots(x, n):
+    p = myPow(x, 1.0 / n)
+    for i in range(n):
+        return [p * cmath.exp(2j * cmath.pi * i)]
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print(myPow(-1, 0.5))
